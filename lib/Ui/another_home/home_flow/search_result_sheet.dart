@@ -134,6 +134,7 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
             style: style18_500.copyWith(fontFamily: 'inter', color: blackColor),
           ),
           30.verticalSpace,
+
           // Row(
           //   children: [
           //     CustomButton(onTap: () {}, text: 'Male'),
