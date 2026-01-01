@@ -30,7 +30,7 @@ class SocialButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                image ?? AppAssets().googleIcon,
+                image ?? AppAssets.googleIcon,
                 height: 20,
                 width: 20,
                 scale: 4,

@@ -5,7 +5,6 @@ import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/get_core.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -169,24 +168,24 @@ class OnBoardingScreenEntity {
 
   static List<OnBoardingScreenEntity> onBoardingData = [
     OnBoardingScreenEntity(
-      image: AppAssets().onBoarding1,
+      image: AppAssets.onBoarding1,
       title: "Find Your Perfect Hostel",
       subTitle:
           " Get AI-powered recommendations tailoredto your budget and preferences.",
     ),
     OnBoardingScreenEntity(
-      image: AppAssets().onBoarding2,
+      image: AppAssets.onBoarding2,
       title: "Instant Booking & Payment",
       subTitle: "Reserve your seat and pay securely in just a few taps.",
     ),
     OnBoardingScreenEntity(
-      image: AppAssets().onBoarding3,
+      image: AppAssets.onBoarding3,
       title: " Share Reels & Build Community   ",
       subTitle:
           "Post your hostel life moments and connect with fellow students worldwide. ",
     ),
     OnBoardingScreenEntity(
-      image: AppAssets().onBoarding4,
+      image: AppAssets.onBoarding4,
       title: "Chat & Stay Connecte",
       subTitle:
           "Message friends, join group chats, and get helpfrom hostel admins anytime.",

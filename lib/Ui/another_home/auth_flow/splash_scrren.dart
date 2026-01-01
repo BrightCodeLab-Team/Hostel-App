@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(AppAssets().splashImage, scale: 4),
+            Image.asset(AppAssets.splashImage, scale: 4),
             const SizedBox(height: 16),
             Text(
               'Another Home',

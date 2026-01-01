@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
         toolbarHeight: 80,
         leading: Padding(
           padding: const EdgeInsets.only(left: 15.0),
-          child: CircleAvatar(backgroundImage: AssetImage(AppAssets().car1)),
+          child: CircleAvatar(backgroundImage: AssetImage(AppAssets.car1)),
         ),
         title: Row(
           children: [
@@ -88,7 +88,7 @@ class HomeScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (BuildContext context, int index) {
                     return CustomHotelDetailsCard(
-                      image: AppAssets().hotel1,
+                      image: AppAssets.hotel1,
                       rating: '4.0',
                       title: 'Generator Hostel',
                       location: 'Gulshan Block 5, Karachi',
@@ -123,7 +123,7 @@ class HomeScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (BuildContext context, int index) {
                     return CustomHotelDetailsCard(
-                      image: AppAssets().hotel1,
+                      image: AppAssets.hotel1,
                       rating: '4.0',
                       title: 'Generator Hostel',
                       location: 'Gulshan Block 5, Karachi',
@@ -156,7 +156,7 @@ class HomeScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (BuildContext context, int index) {
                     return CustomHotelDetailsCard(
-                      image: AppAssets().hotel1,
+                      image: AppAssets.hotel1,
                       rating: '4.0',
                       title: 'Generator Hostel',
                       location: 'Gulshan Block 5, Karachi',

@@ -110,7 +110,7 @@ class LoginScreen extends StatelessWidget {
                       print('Google button pressed');
                     },
                     text: 'Google',
-                    image: AppAssets().googleIcon,
+                    image: AppAssets.googleIcon,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -120,7 +120,7 @@ class LoginScreen extends StatelessWidget {
                       print('Facebook button pressed');
                     },
                     text: 'Facebook',
-                    image: AppAssets().facebookIcon,
+                    image: AppAssets.facebookIcon,
                   ),
                 ),
               ],

@@ -93,7 +93,7 @@ class SignUpScreen extends StatelessWidget {
                   child: SocialButton(
                     onTap: () {},
                     text: 'Google',
-                    image: AppAssets().googleIcon,
+                    image: AppAssets.googleIcon,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -101,7 +101,7 @@ class SignUpScreen extends StatelessWidget {
                   child: SocialButton(
                     onTap: () {},
                     text: 'Facebook',
-                    image: AppAssets().facebookIcon,
+                    image: AppAssets.facebookIcon,
                   ),
                 ),
               ],
