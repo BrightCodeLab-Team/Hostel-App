@@ -6,6 +6,7 @@ import 'package:flutter_basic/core/constants/auth_text_field.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
 import 'package:flutter_basic/core/widgets/custom_button.dart';
+import 'package:flutter_basic/core/widgets/hotel_details.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SearchResultScreen extends StatefulWidget {
@@ -19,18 +20,11 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
   RangeValues values = const RangeValues(10, 90);
   int? selectedIndex;
 
-  /// ✅ ONLY ONE setState here
-  void onClick(int index) {
-    setState(() {
-      selectedIndex = index;
-    });
-  }
-
   void _tapSheet(BuildContext context) {
     showModalBottomSheet(
-      constraints: BoxConstraints(minHeight: 500),
       context: context,
       isScrollControlled: true,
+      constraints: const BoxConstraints(minHeight: 500),
       builder: (context) {
         return StatefulBuilder(
           builder: (context, setModalState) {
@@ -61,9 +55,7 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
             min: 0,
             max: 100,
             onChanged: (newValues) {
-              setModalState(() {
-                values = newValues;
-              });
+              setModalState(() => values = newValues);
             },
           ),
 
@@ -75,73 +67,59 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
 
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              _ratings(
-                rating: '5',
-                color: selectedIndex == 0 ? primaryColor : whiteColor,
-                textColor: selectedIndex == 0 ? whiteColor : blackColor,
+            children: List.generate(5, (index) {
+              return _ratings(
+                rating: '${5 - index}',
+                color: selectedIndex == index ? primaryColor : whiteColor,
+                textColor: selectedIndex == index ? whiteColor : blackColor,
                 onTap: () {
-                  setModalState(() {
-                    selectedIndex = 0;
-                  });
+                  setModalState(() => selectedIndex = index);
                 },
-              ),
-              _ratings(
-                rating: '4',
-                color: selectedIndex == 1 ? primaryColor : whiteColor,
-                textColor: selectedIndex == 1 ? whiteColor : blackColor,
-                onTap: () {
-                  setModalState(() {
-                    selectedIndex = 1;
-                  });
-                },
-              ),
-              _ratings(
-                rating: '3',
-                color: selectedIndex == 2 ? primaryColor : whiteColor,
-                textColor: selectedIndex == 2 ? whiteColor : blackColor,
-                onTap: () {
-                  setModalState(() {
-                    selectedIndex = 2;
-                  });
-                },
-              ),
-              _ratings(
-                rating: '2',
-                color: selectedIndex == 3 ? primaryColor : whiteColor,
-                textColor: selectedIndex == 3 ? whiteColor : blackColor,
-                onTap: () {
-                  setModalState(() {
-                    selectedIndex = 3;
-                  });
-                },
-              ),
-              _ratings(
-                rating: '1',
-                color: selectedIndex == 4 ? primaryColor : whiteColor,
-                textColor: selectedIndex == 4 ? whiteColor : blackColor,
-                onTap: () {
-                  setModalState(() {
-                    selectedIndex = 4;
-                  });
-                },
-              ),
-            ],
+              );
+            }),
           ),
+
           40.verticalSpace,
           Text(
             'Gender-specific hostels',
-            style: style18_500.copyWith(fontFamily: 'inter', color: blackColor),
+            style: style18_500.copyWith(color: blackColor),
           ),
           30.verticalSpace,
 
-          // Row(
-          //   children: [
-          //     CustomButton(onTap: () {}, text: 'Male'),
-          //     10.horizontalSpace,
-          //     CustomButton(onTap: () {}, text: 'female'),
-          //   ],
-          // ),
+          SizedBox(
+            width: MediaQuery.sizeOf(context).width * 0.6,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: CustomButton(onTap: () {}, text: 'Male'),
+                ),
+                10.horizontalSpace,
+                Expanded(
+                  child: CustomButton(onTap: () {}, text: 'Female'),
+                ),
+              ],
+            ),
+          ),
+          30.verticalSpace,
+          SizedBox(
+            width: MediaQuery.sizeOf(context).width * 10.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+
+              children: [
+                Expanded(
+                  child: CustomButton(onTap: () {}, text: 'Reset'),
+                ),
+                10.horizontalSpace,
+                Expanded(
+                  child: CustomButton(onTap: () {}, text: 'Apply'),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -160,7 +138,7 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
               border: Border.all(color: blackColor.withOpacity(0.4)),
               color: Colors.white,
             ),
-            child: const Center(child: Icon(Icons.arrow_back_ios_new_rounded)),
+            child: const Icon(Icons.arrow_back_ios_new_rounded),
           ),
         ),
         title: TextFormField(
@@ -184,6 +162,24 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
             _searchRow('StayEase Hostel'),
             30.verticalSpace,
             _searchRow('StayZone Hostel'),
+
+            Expanded(
+              child: ListView.builder(
+                itemCount: 3,
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                itemBuilder: (BuildContext context, int index) {
+                  return CustomHotelDetailsCard(
+                    image: AppAssets.hotel1,
+                    rating: '4.0',
+                    title: 'Generator Hostel',
+                    location: 'Gulshan Block 5, Karachi',
+                    price: '\$ 48',
+                    availableSeats: '24',
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),
@@ -217,7 +213,7 @@ Widget _ratings({
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(width: 1, color: blackColor.withOpacity(0.25)),
+        border: Border.all(color: blackColor.withOpacity(0.25)),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_basic/Ui/another_home/home_flow/detail_screen.dart';
 import 'package:flutter_basic/Ui/another_home/home_flow/search_result_sheet.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
           debugShowCheckedModeBanner: false,
-          home: SearchResultScreen(),
+          home: DetailScreen(),
         );
       },
     );

@@ -18,7 +18,9 @@ class AppAssets {
   static String onBoarding3 = "$staticAssets/onBoarding3.png";
   static String onBoarding4 = "$staticAssets/onBoarding4.png";
 
-  /// home screen hotels images
+  /// home screen hotels images and icons etc
+  ///
   static String hotel1 = "$staticAssets/hotel1.png";
   static String star = "$iconsAssets/star.png";
+  static String hotelDetails = "$staticAssets/hotelDetails.png";
 }
