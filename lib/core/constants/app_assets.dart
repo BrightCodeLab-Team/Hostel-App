@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/strings.dart';
 
 class AppAssets {
@@ -23,4 +24,8 @@ class AppAssets {
   static String hotel1 = "$staticAssets/hotel1.png";
   static String star = "$iconsAssets/star.png";
   static String hotelDetails = "$staticAssets/hotelDetails.png";
+
+  ///location icon
+  ///
+  static String location = "$iconsAssets/location.png";
 }
