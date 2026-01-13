@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/strings.dart';
 
 class AppAssets {
@@ -18,14 +17,22 @@ class AppAssets {
   static String onBoarding2 = "$staticAssets/onBoarding2.png";
   static String onBoarding3 = "$staticAssets/onBoarding3.png";
   static String onBoarding4 = "$staticAssets/onBoarding4.png";
+  static String img1 = "$staticAssets/img1.png";
+  static String img2 = "$staticAssets/img2.png";
+  static String img3 = "$staticAssets/img3.png";
+  static String room1 = "$staticAssets/room1.png";
 
   /// home screen hotels images and icons etc
-  ///
+
   static String hotel1 = "$staticAssets/hotel1.png";
   static String star = "$iconsAssets/star.png";
   static String hotelDetails = "$staticAssets/hotelDetails.png";
 
-  ///location icon
-  ///
+  ///Icons
+
   static String location = "$iconsAssets/location.png";
+  static String bathroom = "$iconsAssets/bathroom.png";
+  static String wifi = "$iconsAssets/wifi.png";
+  static String water = "$iconsAssets/water.png";
+  static String electricity = "$iconsAssets/electricity.png";
 }

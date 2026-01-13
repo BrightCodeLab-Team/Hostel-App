@@ -2,21 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/auth_text_field.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
-import 'package:flutter_basic/core/widgets/custom_button.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_basic/ui/custom_widgets/custom_button.dart';
 
-class ResetPasswordScreen extends StatelessWidget {
-  const ResetPasswordScreen({super.key});
+class ForgotScreen extends StatelessWidget {
+  const ForgotScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 130,
+        toolbarHeight: 70,
         leading: Padding(
           padding: const EdgeInsets.only(left: 15),
           child: Container(
-            height: 20,
+            height: 10,
             width: 20,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
@@ -35,9 +34,9 @@ class ResetPasswordScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(height: 5),
+            SizedBox(height: 20),
             Text(
-              'Reset Password to Access \nDoorstep Deliveies',
+              'Forgot your password \nand continue',
               style: style24_600.copyWith(
                 fontWeight: FontWeight.w700,
                 fontFamily: 'bold',
@@ -46,18 +45,13 @@ class ResetPasswordScreen extends StatelessWidget {
             SizedBox(height: 20),
             TextFormField(
               decoration: fieldDecoration.copyWith(
-                hintText: 'Enter your new password',
+                hintText: 'Enter email address',
               ),
             ),
-            SizedBox(height: 20),
-            TextFormField(
-              decoration: fieldDecoration.copyWith(
-                hintText: 'Confirm your new password',
-              ),
-            ),
+
             Spacer(),
-            CustomButton(onTap: () {}, text: 'Update Password'),
-            80.verticalSpace,
+            CustomButton(onTap: () {}, text: 'Verify'),
+            SizedBox(height: 40),
           ],
         ),
       ),

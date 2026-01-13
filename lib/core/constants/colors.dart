@@ -10,3 +10,4 @@ const Color redColor = Colors.red;
 const Color blueColor = Colors.blue;
 const Color lightGreyColor = Color(0xffEDEDED);
 const Color greyColor = Color(0xff9E9E9E);
+const Color starColor = Color(0xffFBBC05);

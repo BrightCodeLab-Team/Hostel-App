@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basic/Ui/another_home/auth_flow/login_screen.dart';
+import 'package:flutter_basic/ui/screens/another_home/auth_flow/login_screen.dart';
 import 'package:flutter_basic/core/constants/app_assets.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';

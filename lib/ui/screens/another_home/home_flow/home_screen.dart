@@ -3,7 +3,7 @@ import 'package:flutter_basic/core/constants/app_assets.dart';
 import 'package:flutter_basic/core/constants/auth_text_field.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
-import 'package:flutter_basic/core/widgets/hotel_details.dart';
+import 'package:flutter_basic/ui/custom_widgets/hotel_details.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatelessWidget {

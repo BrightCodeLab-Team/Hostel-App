@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/app_assets.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
+import 'package:flutter_basic/ui/custom_widgets/custom_button.dart';
+import 'package:flutter_basic/ui/screens/another_home/home_flow/details_data.dart';
+import 'package:flutter_basic/ui/screens/another_home/home_flow/review_data.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -14,29 +17,44 @@ class DetailScreen extends StatelessWidget {
       child: Scaffold(
         body: MediaQuery.removePadding(
           context: context,
-          removeTop: true,
-          removeLeft: true,
-          removeRight: true,
+
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 🔹 Top Image
-                SizedBox(
-                  width: double.infinity,
+                Container(
                   height: 348,
-                  child: Image.asset(AppAssets.hotelDetails, fit: BoxFit.cover),
+                  width: double.infinity,
+                  alignment: Alignment.topRight,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      bottomRight: Radius.circular(25),
+                      bottomLeft: Radius.circular(25),
+                    ),
+                    image: DecorationImage(
+                      image: AssetImage(AppAssets.hotelDetails),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: Container(
+                    margin: EdgeInsets.only(top: 20, right: 20),
+                    height: 42,
+                    width: 42,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(14),
+                      color: primaryColor.withOpacity(0.15),
+                    ),
+                    child: Icon(Icons.favorite_border, color: whiteColor),
+                  ),
                 ),
 
                 10.verticalSpace,
 
-                // 🔹 Details Section
                 Padding(
                   padding: const EdgeInsets.all(16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Title & Price
                       Row(
                         children: [
                           Text(
@@ -69,7 +87,7 @@ class DetailScreen extends StatelessWidget {
                           const Spacer(),
                           Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
+                              borderRadius: BorderRadius.circular(99),
                               color: primaryColor.withOpacity(0.2),
                             ),
                             padding: const EdgeInsets.symmetric(
@@ -99,7 +117,6 @@ class DetailScreen extends StatelessWidget {
 
                       20.verticalSpace,
 
-                      // 🔹 Tab Bar (Updated Style)
                       TabBar(
                         indicatorColor: primaryColor,
                         labelColor: primaryColor,
@@ -119,30 +136,36 @@ class DetailScreen extends StatelessWidget {
                         ],
                       ),
 
-                      20.verticalSpace,
+                      SizedBox(
+                        height: 250,
+                        child: TabBarView(
+                          children: [
+                            ///
+                            /// Details
+                            ///
+                            DetailsData(),
 
-                      // 🔹 Description Heading
-                      Text(
-                        'Description',
-                        style: style18_600.copyWith(color: primaryColor),
-                      ),
-
-                      10.verticalSpace,
-
-                      // 🔹 Description Text
-                      Text(
-                        'StayNest Hostel offers a lively and welcoming environment for students and backpackers. With shared dorms, cozy lounges, and a fun community vibe, it’s the perfect place to meet new people while keeping your budget in check.',
-                        style: style12_500.copyWith(
-                          fontSize: 14,
-                          color: blackColor.withOpacity(0.8),
+                            ///
+                            /// Reviews
+                            ///
+                            ReviewData(),
+                          ],
                         ),
                       ),
+                      20.verticalSpace,
                     ],
                   ),
-                ),
+                ), ////
               ],
             ),
           ),
+        ),
+        bottomSheet: Container(
+          padding: EdgeInsets.all(20),
+          height: 100,
+
+          color: Colors.transparent,
+          child: CustomButton(onTap: () {}, text: 'Book Now'),
         ),
       ),
     );

@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_basic/Ui/another_home/home_flow/detail_screen.dart';
-import 'package:flutter_basic/Ui/another_home/home_flow/search_result_sheet.dart';
+import 'package:flutter_basic/ui/screens/another_home/home_flow/home_detail_screen.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -30,6 +29,12 @@ class MyApp extends StatelessWidget {
           builder: DevicePreview.appBuilder,
           theme: ThemeData(
             scaffoldBackgroundColor: whiteColor,
+            bottomSheetTheme: BottomSheetThemeData(
+              surfaceTintColor: Colors.transparent,
+              backgroundColor: Colors.transparent,
+              shadowColor: Colors.transparent,
+              modalBackgroundColor: Colors.transparent,
+            ),
             appBarTheme: const AppBarTheme(
               backgroundColor: whiteColor,
               surfaceTintColor: whiteColor,

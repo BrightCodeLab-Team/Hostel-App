@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
-import 'package:flutter_basic/core/widgets/custom_button.dart';
+import 'package:flutter_basic/ui/custom_widgets/custom_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pinput/pinput.dart';
 
