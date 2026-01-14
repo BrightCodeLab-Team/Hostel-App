@@ -158,6 +158,7 @@ class DetailsData extends StatelessWidget {
               15.verticalSpace,
             ],
           ),
+          100.verticalSpace,
         ],
       ),
     );
