@@ -6,11 +6,6 @@ class AppAssets {
   static String clouds = "$staticAssets/clouds.jpg";
   static String splashImage = "$staticAssets/splashImg.png";
 
-  /// social icons
-
-  static String facebookIcon = "$iconsAssets/facebookIcon.png";
-  static String googleIcon = "$iconsAssets/googleIcon.png";
-
   /// On Boarding Assets
 
   static String onBoarding1 = "$staticAssets/onBoarding1.png";
@@ -24,15 +19,21 @@ class AppAssets {
 
   /// home screen hotels images and icons etc
 
-  static String hotel1 = "$staticAssets/hotel1.png";
-  static String star = "$iconsAssets/star.png";
   static String hotelDetails = "$staticAssets/hotelDetails.png";
+  static String hotel1 = "$staticAssets/hotel1.png";
+  static String locat = "$staticAssets/locat.png";
 
   ///Icons
-
+  static String facebookIcon = "$iconsAssets/facebookIcon.png";
+  static String googleIcon = "$iconsAssets/googleIcon.png";
+  static String star = "$iconsAssets/star.png";
   static String location = "$iconsAssets/location.png";
   static String bathroom = "$iconsAssets/bathroom.png";
   static String wifi = "$iconsAssets/wifi.png";
   static String water = "$iconsAssets/water.png";
   static String electricity = "$iconsAssets/electricity.png";
+  static String roo2 = "$iconsAssets/room2.png";
+  static String room3 = "$iconsAssets/room3.png";
+  static String room4 = "$iconsAssets/room4.png";
+  static String room5 = "$staticAssets/room5.png";
 }

@@ -5,8 +5,10 @@ import 'package:flutter_basic/core/constants/app_assets.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/strings.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
+import 'package:flutter_basic/ui/screens/another_home/home_flow/room_gallery.dart';
 import 'package:flutter_rating/flutter_rating.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/route_manager.dart';
 
 class DetailsData extends StatelessWidget {
   @override
@@ -82,7 +84,19 @@ class DetailsData extends StatelessWidget {
             children: [
               Text('Room', style: style18_600),
               Spacer(),
-              Text('See All', style: style12_500.copyWith(color: redColor)),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RoomGallery()),
+                  );
+                },
+
+                child: Text(
+                  'See All',
+                  style: style12_500.copyWith(color: redColor),
+                ),
+              ),
             ],
           ),
           20.verticalSpace,
@@ -155,9 +169,17 @@ class DetailsData extends StatelessWidget {
               Image.asset(AppAssets.bathroom, scale: 4),
               10.horizontalSpace,
               Text('Bathroom', style: style12_500),
-              15.verticalSpace,
+              30.verticalSpace,
             ],
           ),
+          Divider(
+            color: blackColor.withOpacity(0.25),
+            thickness: 2,
+            height: 10,
+          ),
+          Text('Location', style: style18_600),
+          15.verticalSpace,
+          Image.asset(AppAssets.locat),
           100.verticalSpace,
         ],
       ),
