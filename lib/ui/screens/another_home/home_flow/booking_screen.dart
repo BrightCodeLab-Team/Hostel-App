@@ -12,14 +12,18 @@ class BookingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Booking',
-          style: style12_600.copyWith(
-            color: primaryColor,
-            fontSize: 24,
-            letterSpacing: -2,
+        title: Padding(
+          padding: const EdgeInsets.only(right: 100),
+          child: Text(
+            'Booking',
+            style: style12_600.copyWith(
+              color: primaryColor,
+              fontSize: 24,
+              letterSpacing: -2,
+            ),
           ),
         ),
+
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
