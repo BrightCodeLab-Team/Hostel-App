@@ -5,6 +5,9 @@ import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
 import 'package:flutter_basic/ui/custom_widgets/custom_button.dart';
 import 'package:flutter_basic/ui/custom_widgets/social_button.dart';
+import 'package:flutter_basic/ui/screens/another_home/auth_flow/otp_screen.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:get/state_manager.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -51,7 +54,12 @@ class SignUpScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 50),
-            CustomButton(onTap: () {}, text: 'Register'),
+            CustomButton(
+              onTap: () {
+                Get.to(OtpScreen());
+              },
+              text: 'Register',
+            ),
 
             SizedBox(height: 10),
 

@@ -5,6 +5,11 @@ import 'package:flutter_basic/ui/custom_widgets/social_button.dart';
 import 'package:flutter_basic/core/constants/app_assets.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
+import 'package:flutter_basic/ui/screens/another_home/auth_flow/forgot_screen.dart';
+import 'package:flutter_basic/ui/screens/another_home/auth_flow/sign_up_screen.dart';
+import 'package:flutter_basic/ui/screens/another_home/home_flow/home_screen.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -45,7 +50,9 @@ class LoginScreen extends StatelessWidget {
 
             SizedBox(height: 50),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(ForgotScreen());
+              },
               child: Text(
                 'Forgot Password',
                 style: style12_500.copyWith(fontSize: 14, color: redColor),
@@ -53,16 +60,14 @@ class LoginScreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
 
-            ///
             /// login button
-            ///
             CustomButton(
               onTap: () {
-                //Get.to(LoginScreen());
-                print('Login button pressed');
+                Get.offAll(HomeScreen());
               },
               text: 'Login',
             ),
+
             SizedBox(height: 30),
             Center(
               child: Row(
@@ -73,7 +78,9 @@ class LoginScreen extends StatelessWidget {
                     style: style12_400.copyWith(fontSize: 14),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(SignUpScreen());
+                    },
                     child: Text(
                       'Register',
                       style: style12_600.copyWith(color: primaryColor),

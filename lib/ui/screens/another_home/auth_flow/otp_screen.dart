@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
 import 'package:flutter_basic/ui/custom_widgets/custom_button.dart';
+import 'package:flutter_basic/ui/screens/another_home/home_flow/home_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/route_manager.dart';
+import 'package:get/state_manager.dart';
 import 'package:pinput/pinput.dart';
 
 class OtpScreen extends StatelessWidget {
@@ -85,6 +88,7 @@ class OtpScreen extends StatelessWidget {
             Spacer(),
             CustomButton(
               onTap: () {
+                Get.offAll(HomeScreen());
                 print('Verify button pressed');
               },
               text: 'Verify',
