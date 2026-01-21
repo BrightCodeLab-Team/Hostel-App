@@ -3,7 +3,10 @@ import 'package:flutter_basic/core/constants/auth_text_field.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
 import 'package:flutter_basic/ui/custom_widgets/custom_button.dart';
+import 'package:flutter_basic/ui/screens/another_home/auth_flow/login_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
   const ResetPasswordScreen({super.key});
@@ -56,7 +59,12 @@ class ResetPasswordScreen extends StatelessWidget {
               ),
             ),
             Spacer(),
-            CustomButton(onTap: () {}, text: 'Update Password'),
+            CustomButton(
+              onTap: () {
+                Get.to((LoginScreen()));
+              },
+              text: 'Update Password',
+            ),
             80.verticalSpace,
           ],
         ),

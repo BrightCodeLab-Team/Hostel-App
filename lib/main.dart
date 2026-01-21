@@ -1,9 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
-import 'package:flutter_basic/ui/screens/another_home/auth_flow/login_screen.dart';
-import 'package:flutter_basic/ui/screens/another_home/auth_flow/on_boarding_screen.dart';
-import 'package:flutter_basic/ui/screens/another_home/auth_flow/otp_screen.dart';
 import 'package:flutter_basic/ui/screens/another_home/auth_flow/splash_scrren.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -25,7 +22,7 @@ class MyApp extends StatelessWidget {
         MediaQuery.sizeOf(context).width,
         MediaQuery.sizeOf(context).height,
       ),
-      builder: (context, child) {j
+      builder: (context, child) {
         return GetMaterialApp(
           useInheritedMediaQuery: true,
           locale: DevicePreview.locale(context),

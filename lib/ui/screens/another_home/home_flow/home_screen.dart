@@ -4,7 +4,10 @@ import 'package:flutter_basic/core/constants/auth_text_field.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
 import 'package:flutter_basic/ui/custom_widgets/hotel_details.dart';
+import 'package:flutter_basic/ui/screens/another_home/home_flow/search_result_sheet.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 
 class HomeScreen extends StatelessWidget {
   final List screen = ['screen 1'];
@@ -57,6 +60,10 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextFormField(
+                readOnly: true,
+                onTap: () {
+                  Get.to((SearchResultScreen()));
+                },
                 decoration: fieldDecoration.copyWith(
                   hintText: "Search",
                   prefixIcon: Icon(Icons.search, size: 25.sp),
