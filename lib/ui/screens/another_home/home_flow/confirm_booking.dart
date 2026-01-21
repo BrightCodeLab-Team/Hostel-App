@@ -5,6 +5,7 @@ import 'package:flutter_basic/core/constants/app_assets.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 
 import 'package:flutter_basic/core/constants/text_style.dart';
+import 'package:flutter_basic/ui/custom_widgets/custom_back_button.dart';
 import 'package:flutter_basic/ui/custom_widgets/custom_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,24 +17,7 @@ class ConfirmBookingScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 16.0),
-          child: Container(
-            child: Icon(Icons.arrow_back_ios_new),
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.30),
-                  blurRadius: 6,
-                  offset: Offset(0, 2),
-                  spreadRadius: 0,
-                ),
-              ],
-              shape: BoxShape.circle,
-              color: Colors.white,
-            ),
-          ),
-        ),
+        leading: CustomBackButton(),
         title: Text('Booking', style: style20_600.copyWith(color: blackColor)),
       ),
       body: Column(

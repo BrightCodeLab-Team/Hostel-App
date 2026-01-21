@@ -3,9 +3,13 @@ import 'package:flutter_basic/core/constants/app_assets.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
 import 'package:flutter_basic/ui/custom_widgets/custom_button.dart';
+import 'package:flutter_basic/ui/screens/another_home/home_flow/booking_screen.dart';
 import 'package:flutter_basic/ui/screens/another_home/home_flow/details_data.dart';
 import 'package:flutter_basic/ui/screens/another_home/home_flow/review_data.dart';
+import 'package:flutter_basic/ui/screens/another_home/home_flow/room_gallery.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 
 class DetailScreen extends StatelessWidget {
   const DetailScreen({super.key});
@@ -22,29 +26,32 @@ class DetailScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  height: 348,
-                  width: double.infinity,
-                  alignment: Alignment.topRight,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(25),
-                      bottomLeft: Radius.circular(25),
-                    ),
-                    image: DecorationImage(
-                      image: AssetImage(AppAssets.hotelDetails),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
+                GestureDetector(
+                  onTap: () => Get.to(() => RoomGallery()),
                   child: Container(
-                    margin: EdgeInsets.only(top: 20, right: 20),
-                    height: 42,
-                    width: 42,
+                    height: 348,
+                    width: double.infinity,
+                    alignment: Alignment.topRight,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(14),
-                      color: primaryColor.withOpacity(0.15),
+                      borderRadius: BorderRadius.only(
+                        bottomRight: Radius.circular(25),
+                        bottomLeft: Radius.circular(25),
+                      ),
+                      image: DecorationImage(
+                        image: AssetImage(AppAssets.hotelDetails),
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                    child: Icon(Icons.favorite_border, color: whiteColor),
+                    child: Container(
+                      margin: EdgeInsets.only(top: 20, right: 20),
+                      height: 42,
+                      width: 42,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(14),
+                        color: primaryColor.withOpacity(0.15),
+                      ),
+                      child: Icon(Icons.favorite_border, color: whiteColor),
+                    ),
                   ),
                 ),
 
@@ -165,7 +172,12 @@ class DetailScreen extends StatelessWidget {
           height: 100,
 
           color: Colors.transparent,
-          child: CustomButton(onTap: () {}, text: 'Book Now'),
+          child: CustomButton(
+            onTap: () {
+              Get.to(() => BookingScreen());
+            },
+            text: 'Book Now',
+          ),
         ),
       ),
     );

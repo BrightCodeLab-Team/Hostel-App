@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/app_assets.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
+import 'package:flutter_basic/ui/custom_widgets/custom_back_button.dart';
 import 'package:flutter_basic/ui/custom_widgets/custom_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -24,12 +25,7 @@ class BookingScreen extends StatelessWidget {
           ),
         ),
 
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        leading: CustomBackButton(),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

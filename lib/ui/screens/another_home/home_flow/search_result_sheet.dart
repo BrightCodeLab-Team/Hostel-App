@@ -5,6 +5,7 @@ import 'package:flutter_basic/core/constants/app_assets.dart';
 import 'package:flutter_basic/core/constants/auth_text_field.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
+import 'package:flutter_basic/ui/custom_widgets/custom_back_button.dart';
 import 'package:flutter_basic/ui/custom_widgets/custom_button.dart';
 import 'package:flutter_basic/ui/custom_widgets/hotel_details.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -130,17 +131,7 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 70,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 15),
-          child: Container(
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(color: blackColor.withOpacity(0.4)),
-              color: Colors.white,
-            ),
-            child: const Icon(Icons.arrow_back_ios_new_rounded),
-          ),
-        ),
+        leading: CustomBackButton(),
         title: TextFormField(
           decoration: fieldDecoration.copyWith(
             hintText: "Search",

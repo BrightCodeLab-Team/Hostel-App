@@ -2,34 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/app_assets.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
+import 'package:flutter_basic/ui/custom_widgets/custom_back_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RoomGallery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 16),
-          child: Container(
-            width: 20.w,
-            height: 20.h,
-            decoration: BoxDecoration(
-              color: whiteColor,
-              shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(
-                  color: blackColor.withOpacity(0.20),
-                  blurRadius: 6,
-                  offset: Offset(0, 0),
-                  spreadRadius: 0,
-                ),
-              ],
-            ),
-            child: Icon(Icons.arrow_back_ios_new, size: 20),
-          ),
-        ),
-      ),
+      appBar: AppBar(leading: CustomBackButton()),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
