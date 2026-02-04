@@ -1,0 +1,108 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_basic/core/constants/app_assets.dart';
+import 'package:flutter_basic/core/constants/colors.dart';
+import 'package:flutter_basic/core/constants/text_style.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class ReelScreen extends StatelessWidget {
+  const ReelScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(AppAssets.reel),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 20, bottom: 30, left: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+
+                    children: [
+                      Text(
+                        'Daniel Brown',
+                        style: style12_600.copyWith(color: whiteColor),
+                      ),
+                      5.verticalSpace,
+                      Text(
+                        '“New city, new hostel,new friends ✨”',
+                        style: style12_600.copyWith(color: whiteColor),
+                      ),
+                      5.verticalSpace,
+                      Text(
+                        '#HostelLife #StudentTravel',
+                        style: style12_600.copyWith(
+                          fontFamily: 'Semibold',
+                          color: blackColor,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Stack(
+                        alignment: Alignment.bottomRight,
+                        children: [
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundImage: AssetImage(AppAssets.profile),
+                          ),
+                          CircleAvatar(
+                            radius: 10,
+                            backgroundColor: primaryColor,
+                            child: Icon(
+                              Icons.add,
+                              size: 16,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                      30.verticalSpace,
+                      Image.asset(AppAssets.like, scale: 4),
+                      4.verticalSpace,
+                      Text(
+                        '1.3k',
+                        style: style12_600.copyWith(color: whiteColor),
+                      ),
+                      30.verticalSpace,
+                      Image.asset(AppAssets.chat, scale: 4),
+                      4.verticalSpace,
+                      Text(
+                        '2k',
+                        style: style12_600.copyWith(color: whiteColor),
+                      ),
+                      30.verticalSpace,
+                      Image.asset(AppAssets.share, scale: 4),
+                      4.verticalSpace,
+                      Text(
+                        '1k',
+                        style: style12_600.copyWith(color: whiteColor),
+                      ),
+                      30.verticalSpace,
+                      CircleAvatar(
+                        backgroundImage: AssetImage(AppAssets.profile),
+                        minRadius: 25,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

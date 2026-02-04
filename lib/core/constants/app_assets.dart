@@ -36,4 +36,12 @@ class AppAssets {
   static String room3 = "$iconsAssets/room3.png";
   static String room4 = "$iconsAssets/room4.png";
   static String room5 = "$staticAssets/room5.png";
+  static String like = "$iconsAssets/like.png";
+  static String share = "$iconsAssets/share.png";
+  static String chat = "$iconsAssets/chat.png";
+
+  /// Reel flow
+
+  static String reel = "$staticAssets/reel.png";
+  static String profile = "$staticAssets/profile.png";
 }
