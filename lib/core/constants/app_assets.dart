@@ -44,4 +44,14 @@ class AppAssets {
 
   static String reel = "$staticAssets/reel.png";
   static String profile = "$staticAssets/profile.png";
+  static String reelAdd = "$staticAssets/reelAdd.png";
+  static String reelHome = "$staticAssets/reelHome.png";
+  static String reelChat = "$staticAssets/reelChat.png";
+  static String reelProfile = "$staticAssets/reelProfile.png";
+  static String reelVideo = "$staticAssets/reelVideo.png";
+  static String reelBackBtn = "$staticAssets/reelBackBtn.png";
+  static String reelShare = "$staticAssets/reelShare.png";
+  static String reelNotifi = "$staticAssets/reelNotifi.png";
+  static String myVids = "$staticAssets/myVids.png";
+  static String repostVid = "$staticAssets/repostVid.png";
 }
