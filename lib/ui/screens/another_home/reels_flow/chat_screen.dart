@@ -62,7 +62,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   : MainAxisAlignment.end,
               crossAxisAlignment: messages[index].isSendByMe == false
                   ? CrossAxisAlignment.start
-                  : CrossAxisAlignment.end,
+                  : CrossAxisAlignment.end, //
               children: [
                 Container(
                   decoration: BoxDecoration(
