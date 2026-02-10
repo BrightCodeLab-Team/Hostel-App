@@ -4,8 +4,15 @@ import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ReelScreen extends StatelessWidget {
+class ReelScreen extends StatefulWidget {
   const ReelScreen({super.key});
+
+  @override
+  State<ReelScreen> createState() => _ReelScreenState();
+}
+
+class _ReelScreenState extends State<ReelScreen> {
+  bool isLiked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +35,6 @@ class ReelScreen extends StatelessWidget {
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-
                     children: [
                       Text(
                         'Daniel Brown',
@@ -70,10 +76,22 @@ class ReelScreen extends StatelessWidget {
                         ],
                       ),
                       30.verticalSpace,
-                      Image.asset(AppAssets.like, scale: 4),
+
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            isLiked = !isLiked;
+                          });
+                        },
+                        child: Image.asset(
+                          AppAssets.like,
+                          scale: 4,
+                          color: isLiked ? Colors.red : Colors.white,
+                        ),
+                      ),
                       4.verticalSpace,
                       Text(
-                        '1.3k',
+                        isLiked ? '12k ' : '12.1k',
                         style: style12_600.copyWith(color: whiteColor),
                       ),
                       30.verticalSpace,

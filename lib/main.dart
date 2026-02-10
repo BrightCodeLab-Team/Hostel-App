@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
-import 'package:flutter_basic/ui/screens/another_home/reels_flow/chat_screen.dart';
+import 'package:flutter_basic/ui/screens/another_home/reels_flow/reel_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:device_preview/device_preview.dart';
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
           debugShowCheckedModeBanner: false,
-          home: ChatScreen(),
+          home: ReelScreen(),
         );
       },
     );
