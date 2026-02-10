@@ -8,7 +8,6 @@ class CircularIconButton extends StatelessWidget {
   final double size;
   final Color backgroundColor;
   final Color? iconColor;
-  final Color? asfasf;
 
   const CircularIconButton({
     super.key,
@@ -18,7 +17,6 @@ class CircularIconButton extends StatelessWidget {
     this.size = 40,
     this.backgroundColor = whiteColor,
     this.iconColor,
-    this.asfasf,
   }) : assert(
          imagePath != null || icon != null,
          'Either imagePath or icon must be provided',
