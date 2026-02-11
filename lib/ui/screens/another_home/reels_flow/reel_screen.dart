@@ -195,7 +195,7 @@ class _ReelScreenState extends State<ReelScreen> {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
-          child: Text('Whatsapp', style: style12_400),
+          child: Text('Whatsapp', style: style12_500),
         ),
       ],
     );
