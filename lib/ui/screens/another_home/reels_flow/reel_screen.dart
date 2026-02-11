@@ -102,7 +102,28 @@ class _ReelScreenState extends State<ReelScreen> {
                         style: style12_600.copyWith(color: whiteColor),
                       ),
                       30.verticalSpace,
-                      Image.asset(AppAssets.share, scale: 4),
+
+                      ///
+                      /// share button
+                      ///
+                      GestureDetector(
+                        onTap: () {
+                          showModalBottomSheet(
+                            context: context,
+
+                            backgroundColor: whiteColor,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(20),
+                              ),
+                            ),
+                            builder: (context) {
+                              return _buildBottomSheet();
+                            },
+                          );
+                        },
+                        child: Image.asset(AppAssets.share, scale: 4),
+                      ),
                       4.verticalSpace,
                       Text(
                         '1k',
@@ -121,6 +142,62 @@ class _ReelScreenState extends State<ReelScreen> {
           ],
         ),
       ),
+    );
+  }
+
+  ///
+  /// bottom sheet de ki ba ze coding kom
+  ///
+
+  Widget _buildBottomSheet() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          child: Row(
+            children: [
+              Image.asset(
+                AppAssets.searchIcon,
+                scale: 1,
+                width: 60,
+                height: 80,
+              ),
+              Spacer(),
+              Image.asset(AppAssets.crossIcon, scale: 1, width: 60, height: 80),
+            ],
+          ),
+        ),
+        50.verticalSpace,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          child: CircleAvatar(
+            radius: 30,
+            backgroundImage: AssetImage(AppAssets.car1),
+          ),
+        ),
+        10.verticalSpace,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          child: Text('Zayn_Flows', style: style12_400),
+        ),
+        20.verticalSpace,
+        Divider(color: Colors.grey),
+        20.verticalSpace,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          child: Container(
+            width: 50,
+            height: 50,
+            child: Column(children: [Image.asset(AppAssets.whatsapp)]),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          child: Text('Whatsapp', style: style12_400),
+        ),
+      ],
     );
   }
 }

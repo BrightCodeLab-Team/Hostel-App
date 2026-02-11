@@ -54,4 +54,7 @@ class AppAssets {
   static String reelNotifi = "$staticAssets/reelNotifi.png";
   static String myVids = "$staticAssets/myVids.png";
   static String repostVid = "$staticAssets/repostVid.png";
+  static String searchIcon = "$staticAssets/searchIcon.png";
+  static String crossIcon = "$staticAssets/crossIcon.png";
+  static String whatsapp = "$staticAssets/whatsapp.png";
 }

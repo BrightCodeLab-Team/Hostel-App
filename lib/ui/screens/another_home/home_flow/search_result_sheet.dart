@@ -23,6 +23,7 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
 
   void _tapSheet(BuildContext context) {
     showModalBottomSheet(
+      backgroundColor: whiteColor,
       context: context,
       isScrollControlled: true,
       constraints: const BoxConstraints(minHeight: 500),
