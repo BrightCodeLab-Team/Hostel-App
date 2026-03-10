@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/app_assets.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
+import 'package:flutter_basic/ui/custom_widgets/share_to_profile.dart';
+import 'package:flutter_basic/ui/custom_widgets/share_to_socials.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ReelScreen extends StatefulWidget {
@@ -91,11 +93,11 @@ class _ReelScreenState extends State<ReelScreen> {
                       ),
                       4.verticalSpace,
                       Text(
-                        isLiked ? '12k ' : '12.1k',
+                        isLiked ? '12.1k ' : '12k',
                         style: style12_600.copyWith(color: whiteColor),
                       ),
                       30.verticalSpace,
-                      Image.asset(AppAssets.chat, scale: 4),
+                      Image.asset(AppAssets.comment, scale: 4),
                       4.verticalSpace,
                       Text(
                         '2k',
@@ -118,7 +120,7 @@ class _ReelScreenState extends State<ReelScreen> {
                               ),
                             ),
                             builder: (context) {
-                              return _buildBottomSheet();
+                              return _buildShareBottomSheet();
                             },
                           );
                         },
@@ -149,7 +151,7 @@ class _ReelScreenState extends State<ReelScreen> {
   /// bottom sheet de ki ba ze coding kom
   ///
 
-  Widget _buildBottomSheet() {
+  Widget _buildShareBottomSheet() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
@@ -170,32 +172,47 @@ class _ReelScreenState extends State<ReelScreen> {
           ),
         ),
         50.verticalSpace,
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0),
-          child: CircleAvatar(
-            radius: 30,
-            backgroundImage: AssetImage(AppAssets.car1),
+        SizedBox(
+          height: 100,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: 10,
+            itemBuilder: (BuildContext context, int index) {
+              return ShareToProfile(
+                image: AppAssets.locat,
+                text: 'sanan',
+                onPresses: () {},
+              );
+            },
           ),
-        ),
-        10.verticalSpace,
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0),
-          child: Text('Zayn_Flows', style: style12_400),
         ),
         20.verticalSpace,
         Divider(color: Colors.grey),
+
         20.verticalSpace,
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0),
-          child: Container(
-            width: 50,
-            height: 50,
-            child: Column(children: [Image.asset(AppAssets.whatsapp)]),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0),
-          child: Text('Whatsapp', style: style12_500),
+        Row(
+          children: [
+            SocialAppsShare(
+              image: AppAssets.whatsapp,
+              text: 'whatsapp',
+              onPresses: () {},
+            ),
+            SocialAppsShare(
+              image: AppAssets.whatsapp,
+              text: 'whatsapp',
+              onPresses: () {},
+            ),
+            SocialAppsShare(
+              image: AppAssets.whatsapp,
+              text: 'whatsapp',
+              onPresses: () {},
+            ),
+            SocialAppsShare(
+              image: AppAssets.whatsapp,
+              text: 'whatsapp',
+              onPresses: () {},
+            ),
+          ],
         ),
       ],
     );

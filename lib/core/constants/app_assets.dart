@@ -57,4 +57,5 @@ class AppAssets {
   static String searchIcon = "$staticAssets/searchIcon.png";
   static String crossIcon = "$staticAssets/crossIcon.png";
   static String whatsapp = "$staticAssets/whatsapp.png";
+  static String comment = "$staticAssets/comment.png";
 }
