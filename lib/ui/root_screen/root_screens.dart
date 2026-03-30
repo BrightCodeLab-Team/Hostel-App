@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
+import 'package:flutter_basic/ui/chat_section/chat_list.dart';
 import 'package:flutter_basic/ui/screens/another_home/home_flow/home_screen.dart';
 import 'package:flutter_basic/ui/screens/another_home/reels_flow/profile_screen.dart';
 import 'package:flutter_basic/ui/screens/another_home/reels_flow/reel_screen.dart';
@@ -18,7 +19,7 @@ class _RootScreensState extends State<RootScreens> {
     HomeScreen(),
     ReelScreen(), //Text('Home', style: style12_600)
     Text('Add', style: style12_600),
-    Text('Chat', style: style12_600),
+   Chatscreen(),
     ProfileScreen(),
   ];
   @override

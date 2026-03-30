@@ -13,39 +13,47 @@ class Chatscreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        title: Text('Chat', style: style18_400),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            TextFormField(
-              decoration: fieldDecoration.copyWith(
-                prefixIcon: Image.asset(AppAssets.search, scale: 4),
-                hintText: 'Search',
-              ),
+
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(40),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 5.0, bottom: 4),
+                  child: Text('Chat', style: style18_400),
+                ),
+                TextFormField(
+                  decoration: fieldDecoration.copyWith(
+                    prefixIcon: Image.asset(AppAssets.search, scale: 4),
+                    hintText: 'Search',
+                  ),
+                ),
+              ],
             ),
-            20.verticalSpace,
-            // Expanded for ListView.builder
-            Expanded(
-              child: ListView.builder(
-                itemCount: 9, // call chatTile 7 times
-                itemBuilder: (context, index) {
-                  return Column(
-                    children: [
-                      chatTile(),
-                      2.verticalSpace,
-                      Divider(
-                        thickness: 1,
-                        color: Colors.black.withOpacity(0.2),
-                      ),
-                    ],
-                  );
-                },
-              ),
-            ),
-          ],
+          ),
         ),
+      ),
+      body: ListView.builder(
+        itemCount: 9, // call chatTile 7 times
+        itemBuilder: (context, index) {
+          return Column(
+            children: [
+              chatTile(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Divider(
+                  color: greyColor.withOpacity(0.5),
+                  thickness: 0.5,
+                  height: 0,
+                ),
+              ),
+            ],
+          );
+        },
       ),
     );
   }
@@ -82,5 +90,6 @@ class Chatscreen extends StatelessWidget {
         ],
       ),
     );
+    ;
   }
 }
