@@ -1,15 +1,18 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/ui/chat_section/chat_list.dart';
-import 'package:flutter_basic/ui/screens/another_home/create_reels/create_reel_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:device_preview/device_preview.dart';
 
+const bool useDevicePreview = false;
+
 void main() {
   runApp(
-    DevicePreview(enabled: !kReleaseMode, builder: (context) => const MyApp()),
+    DevicePreview(
+      enabled: useDevicePreview,
+      builder: (context) => const MyApp(),
+    ),
   );
 }
 
@@ -30,7 +33,7 @@ class MyApp extends StatelessWidget {
           builder: DevicePreview.appBuilder,
           theme: ThemeData(
             scaffoldBackgroundColor: whiteColor,
-            bottomSheetTheme: BottomSheetThemeData(
+            bottomSheetTheme: const BottomSheetThemeData(
               surfaceTintColor: Colors.transparent,
               backgroundColor: Colors.transparent,
               shadowColor: Colors.transparent,
@@ -51,9 +54,5 @@ class MyApp extends StatelessWidget {
 }
 
 /* 
-
-git add . 
-git commit -m "update"
- git push origin main
- 
- */
+git add . && git commit -m "update" && git push main
+*/
