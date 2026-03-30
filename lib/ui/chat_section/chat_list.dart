@@ -17,7 +17,7 @@ class Chatscreen extends StatelessWidget {
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(40),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 18.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
