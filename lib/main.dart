@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
-import 'package:flutter_basic/ui/chat_section/chat_list.dart';
 import 'package:flutter_basic/ui/root_screen/root_screens.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -23,15 +22,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(
-        MediaQuery.sizeOf(context).width,
-        MediaQuery.sizeOf(context).height,
-      ),
+     
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
       builder: (context, child) {
         return GetMaterialApp(
+          debugShowCheckedModeBanner: false,
+
+   
           useInheritedMediaQuery: true,
           locale: DevicePreview.locale(context),
           builder: DevicePreview.appBuilder,
+
           theme: ThemeData(
             scaffoldBackgroundColor: whiteColor,
             bottomSheetTheme: const BottomSheetThemeData(
@@ -46,14 +49,10 @@ class MyApp extends StatelessWidget {
               elevation: 0.0,
             ),
           ),
-          debugShowCheckedModeBanner: false,
-          home: RootScreens(),
+
+          home: const RootScreens(),
         );
       },
     );
   }
 }
-
-/* 
-git add .;git commit -m"update";git push origin main
-*/

@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/auth_text_field.dart';
-import 'package:flutter_basic/core/constants/colors.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
 import 'package:flutter_basic/ui/custom_widgets/custom_back_button.dart';
 import 'package:flutter_basic/ui/custom_widgets/custom_button.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/src/extension_navigation.dart';
 
 class ForgotScreen extends StatelessWidget {
   const ForgotScreen({super.key});

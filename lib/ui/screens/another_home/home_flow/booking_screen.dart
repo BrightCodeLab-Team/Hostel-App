@@ -38,10 +38,10 @@ class BookingScreen extends StatelessWidget {
                   Container(
                     width: 100,
                     height: 90,
-                    child: Image.asset(AppAssets.room5, fit: BoxFit.cover),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
                     ),
+                    child: Image.asset(AppAssets.room5, fit: BoxFit.cover),
                   ),
 
                   Column(
