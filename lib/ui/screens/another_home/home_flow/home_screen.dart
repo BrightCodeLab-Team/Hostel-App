@@ -10,7 +10,9 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 
 class HomeScreen extends StatelessWidget {
-  final List screen = ['screen 1'];
+  //final List screen = ['screen 1'];
+
+  HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -87,8 +89,7 @@ class HomeScreen extends StatelessWidget {
               10.verticalSpace,
 
               SizedBox(
-                height: 254,
-
+                height: 260.h,
                 child: ListView.builder(
                   itemCount: 5,
                   shrinkWrap: true,
@@ -122,7 +123,7 @@ class HomeScreen extends StatelessWidget {
               20.verticalSpace,
 
               SizedBox(
-                height: 254,
+                height: 260.h,
 
                 child: ListView.builder(
                   itemCount: 5,
@@ -140,7 +141,7 @@ class HomeScreen extends StatelessWidget {
                   },
                 ),
               ),
-              20.verticalSpace,
+              22.verticalSpace,
               Row(
                 children: [
                   Text(
@@ -155,7 +156,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 254,
+                height: 260.h,
 
                 child: ListView.builder(
                   itemCount: 5,

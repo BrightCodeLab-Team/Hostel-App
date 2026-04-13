@@ -3,12 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basic/core/constants/app_assets.dart';
 import 'package:flutter_basic/core/constants/colors.dart';
-import 'package:flutter_basic/core/constants/strings.dart';
 import 'package:flutter_basic/core/constants/text_style.dart';
 import 'package:flutter_basic/ui/screens/another_home/home_flow/room_gallery.dart';
 import 'package:flutter_rating/flutter_rating.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/route_manager.dart';
 
 class DetailsData extends StatelessWidget {
   @override

@@ -6,6 +6,8 @@ import 'package:flutter_basic/ui/custom_widgets/custom_back_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RoomGallery extends StatelessWidget {
+  const RoomGallery({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,9 +21,9 @@ class RoomGallery extends StatelessWidget {
             children: [
               Text("Room", style: style18_800),
               20.verticalSpace,
-              Container(
-                child: Image.asset(AppAssets.room5),
+              SizedBox(
                 width: double.infinity,
+                child: Image.asset(AppAssets.room5),
               ),
               GridView.builder(
                 itemCount: 4,
@@ -55,9 +57,9 @@ class RoomGallery extends StatelessWidget {
               10.verticalSpace,
               Text('Bathroom', style: style18_800),
               20.verticalSpace,
-              Container(
-                child: Image.asset(AppAssets.room5),
+              SizedBox(
                 width: double.infinity,
+                child: Image.asset(AppAssets.room5),
               ),
               GridView.builder(
                 itemCount: 4,

@@ -16,7 +16,7 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   int sanan = 0;
 
-  onClick(index) {
+  void onClick(index) {
     sanan = index;
     setState(() {});
   }

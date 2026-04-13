@@ -127,7 +127,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               duration: const Duration(milliseconds: 300),
                               curve: Curves.easeInOut,
                             );
-                      ;
                     }
                   },
                   style: ElevatedButton.styleFrom(
